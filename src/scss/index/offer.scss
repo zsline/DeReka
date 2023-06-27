@@ -1,8 +1,61 @@
-.offer{
+.offer {
     background-image: url(../img/bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
+    padding: 280px 0 0;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+    &__block {
+        max-width: 585px;
+    }
+    &__title {
+        text-align: right;
+        font-size: 96px;
+        font-family: Montserrat;
+        font-weight: 700;
+        margin-bottom: 24px;
+    }
+
+    &__subtitle {
+        text-align: right;
+        font-size: 40px;
+        font-family: Montserrat;
+        font-weight: 500;
+        max-width: 550px;
+        margin-left: auto;
+
+    }
+
+    &__quote {
+        display: inline-block;
+        width: 50%;
+
+        &--text {
+            padding: 54px 64px;
+            font-family: Jeff Script;
+            font-size: 36px;
+            margin-bottom: 60px;
+
+            p {
+                transform: rotate(-5.514deg);
+            }
+
+        }
+
+        &--btns {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+
 }

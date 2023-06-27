@@ -1,5 +1,3 @@
-
-
 body {
     padding: 0;
     margin: 0;
@@ -7,7 +5,11 @@ body {
     color: var(--text-color);
     font-family: Montserrat, sans-serif;
 }
-
+h3 {
+    font-size: 48px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
 
 .container {
     max-width: 1230px;
@@ -15,10 +17,14 @@ body {
     margin: 0 auto;
 }
 
+.glass {
+    @include glass;
+}
 
-.test{
+.test {
     padding: 100px 0;
-    &__img{
+
+    &__img {
         position: relative;
         width: 500px;
         height: 300px;
@@ -26,19 +32,37 @@ body {
         overflow: hidden;
         margin: 0 auto;
         cursor: pointer;
-        img{
+
+        img {
             position: absolute;
             left: 0;
             width: 100%;
         }
-        &.anim-start{
+
+        &.anim-start {
             animation: neon 6s infinite ease-in-out;
-            img{
-            animation: scroll 15s infinite ease-in-out;
+
+            img {
+                animation: scroll 15s infinite ease-in-out;
             }
         }
     }
 }
+
+.btn {
+    display: inline-block;
+    padding: 23px 42px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.12px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.20);
+    }
+}
+
 
 @include scroll;
 @include neon;
