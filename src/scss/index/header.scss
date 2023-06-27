@@ -1,0 +1,36 @@
+.header {
+
+    &__nav {
+        position: absolute;
+        max-width: 1230px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+        @include glass;
+        padding: 26px;
+        border-top: none;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+
+        &--menu {
+            display: flex;
+            gap: 34px;
+
+            a {
+                color: var(--text-color);
+                text-shadow: var(--text-color) 0px 0px 0px;
+                font-size: 20px;
+                font-weight: 400;
+                font-family: 'Montserrat';
+                transition: all 0.3s;
+
+                &:hover {
+                    @include menu-hover;
+                }
+            }
+        }
+    }
+}

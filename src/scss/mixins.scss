@@ -1,0 +1,102 @@
+@mixin menu-hover {
+    color: #8D8BED;
+    text-shadow: var(--accent) 0px 0px 4px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Montserrat';
+}
+
+@mixin glass {
+    border-radius: 10px;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.20);
+    border-right: 2px solid rgba(255, 255, 255, 0.10);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+    border-left: 0.5px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.10);
+    box-shadow: 0px 0px 20px 8px rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+}
+
+
+
+
+@mixin neon{
+    @keyframes neon {
+        0%{
+            box-shadow: 0px 0px 20px 8px rgba(254, 231, 231, 0.5);
+            border: 2px solid rgba(254, 231, 231, 0.25);
+        }
+        25%{
+            box-shadow: 0px 0px 40px 8px rgba(31, 199, 255, 0.5);
+            border: 2px solid rgba(31, 199, 255, 0.25);
+    
+        }
+        50%{
+            box-shadow: 0px 0px 40px 8px rgba(210, 12, 255, 0.5);
+            border: 2px solid rgba(210, 12, 255, 0.25);
+    
+        }
+        75%{
+            box-shadow: 0px 0px 40px 8px rgba(64, 35, 255, 0.5);
+            border: 2px solid rgba(64, 35, 255, 0.25);
+    
+        }
+        80%{
+            box-shadow: 0px 0px 20px 8px rgba(64, 35, 255, 0.5);
+            border: 2px solid rgba(64, 35, 255, 0.25);
+    
+        }
+        81%{
+            box-shadow: 0px 0px 40px 8px rgba(64, 35, 255, 0);
+            border: 2px solid rgba(64, 35, 255, 0.25);
+    
+        }
+        82%{
+            box-shadow: 0px 0px 40px 8px rgba(64, 35, 255, 0);
+            border: 2px solid rgba(64, 35, 255, 0.25);
+    
+        }
+        84%{
+            box-shadow: 0px 0px 20px 8px rgba(64, 35, 255, 0.5);
+            border: 2px solid rgba(64, 35, 255, 0.25);
+    
+        }
+        87%{
+            box-shadow: 0px 0px 20px 8px rgba(64, 35, 255, 0);
+            border: 2px solid rgba(64, 35, 255, 0.25);
+    
+        }
+        88%{
+            box-shadow: 0px 0px 20px 8px rgba(64, 35, 255, 0);
+            border: 2px solid rgba(64, 35, 255, 0.25);
+    
+        }
+        89%{
+            box-shadow: 0px 0px 30px 8px rgba(64, 35, 255, 0.25);
+            border: 2px solid rgba(64, 35, 255, 0.25);
+    
+        }
+        100%{
+            box-shadow: 0px 0px 20px 8px rgba(254, 231, 231, 0.5);
+            border: 2px solid rgba(254, 231, 231, 0.25);
+    
+        }
+    }
+}
+
+@mixin scroll{
+    @keyframes scroll {
+        0%{
+            top: 0;
+        }
+        50%{
+            top: -440%;
+        }
+        75%{
+            top: -440%;
+        }
+        100%{
+            top: 0;
+        }
+    }
+}
