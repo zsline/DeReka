@@ -1,0 +1,31 @@
+.works{
+    padding: 100px 0;
+    &__slider{
+        &--item{
+            position: relative;
+        }
+        &--text{
+            width: 40%;
+            h4{
+                font-size: 32px;
+                padding: 90px 0 20px;
+            }
+            p{
+                font-size: 18px;
+                line-height: 24px;
+                margin-bottom: 60px;
+            }
+        }
+        &--img{
+            position: absolute;
+            top: -90px;
+            right: -5vw;
+        }
+        &--btns{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 30px;
+        }
+    }
+}

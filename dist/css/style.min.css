@@ -97,6 +97,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: Montserrat, sans-serif;
+  font-size: 16px;
 }
 
 h3 {
@@ -510,4 +511,34 @@ button {
   margin-bottom: 24px;
   font-size: 20px;
   line-height: 30px;
+}
+
+.works {
+  padding: 100px 0;
+}
+.works__slider--item {
+  position: relative;
+}
+.works__slider--text {
+  width: 40%;
+}
+.works__slider--text h4 {
+  font-size: 32px;
+  padding: 90px 0 20px;
+}
+.works__slider--text p {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 60px;
+}
+.works__slider--img {
+  position: absolute;
+  top: -90px;
+  right: -5vw;
+}
+.works__slider--btns {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 30px;
 }
