@@ -1,0 +1,35 @@
+.tools{
+
+    &__inner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        padding: 44px 0;
+        background-color: var(--white-color);
+        margin-top: 65px;
+        img{
+            max-height: 132px;
+        }
+    }
+    &__line{
+        position: relative;
+        background-image: url(../img/footer.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        background-attachment: fixed;
+        height: 300px;
+        width: 100%;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color:var(--bg-color);
+            opacity: 0.7;
+        }
+    }
+}
