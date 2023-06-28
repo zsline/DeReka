@@ -5,10 +5,15 @@ body {
     color: var(--text-color);
     font-family: Montserrat, sans-serif;
 }
+
 h3 {
     font-size: 48px;
     font-weight: 300;
     text-transform: uppercase;
+}
+
+button {
+    color: var(--white-color);
 }
 
 .container {
@@ -21,34 +26,13 @@ h3 {
     @include glass;
 }
 
-.test {
-    padding: 100px 0;
+.anim-start {
+    animation: neon 6s infinite ease-in-out;
 
-    &__img {
-        position: relative;
-        width: 500px;
-        height: 300px;
-        border-radius: 10px;
-        overflow: hidden;
-        margin: 0 auto;
-        cursor: pointer;
-
-        img {
-            position: absolute;
-            left: 0;
-            width: 100%;
-        }
-
-        &.anim-start {
-            animation: neon 6s infinite ease-in-out;
-
-            img {
-                animation: scroll 15s infinite ease-in-out;
-            }
-        }
+    img {
+        animation: scroll 20s infinite ease-in-out;
     }
 }
-
 .btn {
     display: inline-block;
     padding: 23px 42px;
@@ -63,6 +47,42 @@ h3 {
     }
 }
 
+.btn-c {
+    display: inline-block;
+    padding: 10px 40px;
+    background-color: var(--blue);
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: Montserrat;
+    transition: all 0.3s;
+    height: auto;
+    flex: auto;
+    &:hover {
+        background-color: var(--active);
+    }
+}
+.btn-o{
+    display: inline-block;
+    padding: 10px 17px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: Montserrat;
+    transition: all 0.3s;
+}
+
+.tabs__nav-btn--active{
+    background-color: var(--active);
+    box-shadow: 0 0 12px 5px var(--active);
+    
+}
+
+.tabs__panel {
+    display: none;
+}
+
+.tabs__panel--active {
+    display: block;
+}
 
 @include scroll;
 @include neon;
