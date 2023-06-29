@@ -4,23 +4,52 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
-    padding: 280px 0 0;
-
+    padding: 280px 0;
+    @media (max-width:1220px) {
+        padding: 80px 0;
+    }
+    @media (max-width:520px) {
+        background-position: -240px center;
+    }
     &__wrapper {
         display: flex;
         align-items: center;
         gap: 30px;
+
+        @media (max-width:1220px) {
+            flex-direction: column-reverse;
+        }
+        @media (max-width:704px) {
+            padding: 0 10px;
+
+        }
+        @media (max-width:440px) {
+            padding: 0;
+    
+        }
     }
+
     &__block {
         max-width: 585px;
     }
+
     &__title {
         text-align: right;
         font-size: 96px;
         font-family: Montserrat;
         font-weight: 700;
         margin-bottom: 24px;
+        @media (max-width:704px) {
+            font-size: 72px;
+
+        }
+        @media (max-width:520px) {
+            font-size: 56px;
+
+        }
+        @media (max-width:440px) {
+            font-size: 48px;
+        }
     }
 
     &__subtitle {
@@ -30,21 +59,54 @@
         font-weight: 500;
         max-width: 550px;
         margin-left: auto;
+        @media (max-width:704px) {
+            font-size: 32px;
 
+        }
+        @media (max-width:520px) {
+            font-size: 20px;
+
+        }
     }
 
     &__quote {
         display: inline-block;
         width: 50%;
+        @media (max-width:1130px) {
+            width: 80%;
+        }
+        @media (max-width:704px) {
+            width: 100%;
+
+        }
+
 
         &--text {
             padding: 54px 64px;
             font-family: Jeff Script;
             font-size: 36px;
             margin-bottom: 60px;
+            @media (max-width:704px) {
+                padding: 32px 40px;
+            }
+            @media (max-width:580px) {
+                font-size: 26px;
+    
+            }
+            @media (max-width:470px) {
+                padding: 32px 15px;
+                margin-bottom: 20px;
 
+    
+            }
+            @media (max-width:390px) {
+                font-size: 20px;
+            }
             p {
                 transform: rotate(-5.514deg);
+                @media (max-width:1130px) {
+                   text-align: center;
+                }
             }
 
         }
@@ -54,6 +116,19 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            @media (max-width:1130px) {
+                gap: 30px;
+            }
+            @media (max-width:470px) {
+                gap: 10px;
+                flex-direction: column;
+            }
+            .btn{
+                @media (max-width:470px) {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
         }
     }
 

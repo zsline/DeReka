@@ -6,7 +6,7 @@
 5. Проверки на различные условия
 
 */
-class DerTabs {
+export class DerTabs {
     constructor(selector, options) {
         let defaultOption = {
             isChanget: () => { }
