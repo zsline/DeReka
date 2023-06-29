@@ -21,9 +21,6 @@ const blockAnim = document.querySelectorAll('.animate');
 const activeContent = document.querySelector('.tabs__panel--active');
 if(blockAnim){
     blockAnim.forEach((el) => {
-        // el.classList.remove('anim-start');
-        if(el.contains(activeContent)){
-        }
         setTimeout(() => el.classList.add('anim-start'), 4000);
         el.addEventListener('click', function() {
             el.classList.toggle('anim-start');
