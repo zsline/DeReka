@@ -8,8 +8,19 @@
         padding: 44px 0;
         background-color: var(--white-color);
         margin-top: 65px;
+        overflow: hidden;
+        @media (max-width:560px) {
+            padding: 22px 0;
+            gap: 30px;
+            }
         img{
             max-height: 132px;
+            @media (max-width:800px) {
+            max-height: 90px;
+            }
+            @media (max-width:560px) {
+            max-height: 60px;
+            }
         }
     }
     &__line{
