@@ -43,9 +43,9 @@ button {
 .anim-start {
     animation: neon 6s infinite ease-in-out;
 
-    img {
-        animation: scroll 20s infinite ease-in-out;
-    }
+    // img {
+    //     animation: scroll 20s infinite ease-in-out;
+    // }
 }
 .btn {
     display: inline-block;
@@ -103,10 +103,12 @@ button {
     display: block;
 }
 
-@include scroll;
+// @include scroll;
 @include neon;
 
-
+.open{
+    display: block;
+}
 
 
 
