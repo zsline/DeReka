@@ -18,13 +18,50 @@ export function isWebp() {
 // start animation
 
 const blockAnim = document.querySelectorAll('.animate');
-const activeContent = document.querySelector('.tabs__panel--active');
 if(blockAnim){
     blockAnim.forEach((el) => {
-        setTimeout(() => el.classList.add('anim-start'), 4000);
         el.addEventListener('click', function() {
+            console.dir(el)
             el.classList.toggle('anim-start');
+            let heightImg = +el.childNodes[1].childNodes[3].height;
+            let content = +el.parentElement.clientHeight;
+            console.dir(heightImg);
+            let id = setInterval(frame, 2);
+            let pos = 0;
+            function frame(){
+                if(pos == -heightImg + content || !el.classList.contains('anim-start')){
+                    clearInterval(id);
+                 } else {
+                    pos -- ;
+                    el.childNodes[1].childNodes[3].style.top = pos + 'px';
+                 }
+            }
+
         });
+    });
+}
+
+// open text
+
+const texts = document.querySelectorAll('.type__content--text');
+if(texts) {
+    texts.forEach((el) => {
+        const btn = el.children[1];
+        const text = el.children[0];
+        btn.addEventListener('click', function(){
+            if(btn.innerText == 'Читать'){
+                btn.innerHTML = 'Закрыть';
+                text.style.display = 'block';
+            } else if (btn.innerText == 'Закрыть'){
+                btn.innerHTML = 'Читать';
+                text.style.display = 'none';
+            } else {
+                btn.innerHTML = 'Читать';
+                text.style.display = 'none';
+
+            }
+        });
+        
     });
 }
 
