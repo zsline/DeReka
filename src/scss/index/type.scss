@@ -1,6 +1,8 @@
 .type {
     padding: 100px 0;
-
+    @media (max-width: 425px) {
+        padding: 50px 0;
+    }
     &__nav {
         display: flex;
         justify-content: center;
@@ -20,7 +22,6 @@
 
     &__content {
         position: relative;
-        height: 640px;
         width: 100%;
 
         &--img {
@@ -86,6 +87,9 @@
                 } 
             }
         }
+    }
+    &__tabs{
+        display: block;
     }
     .tabs__nav-btn{
         height: 58px;

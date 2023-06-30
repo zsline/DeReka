@@ -101,6 +101,8 @@ button {
 
 .tabs__panel--active {
     display: block;
+    height: 100%;
+    max-height: 1100px;
 }
 
 // @include scroll;

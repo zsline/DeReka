@@ -201,6 +201,8 @@ button {
 
 .tabs__panel--active {
   display: block;
+  height: 100%;
+  max-height: 1100px;
 }
 
 @keyframes neon {
@@ -705,6 +707,11 @@ button {
 .type {
   padding: 100px 0;
 }
+@media (max-width: 425px) {
+  .type {
+    padding: 50px 0;
+  }
+}
 .type__nav {
   display: flex;
   justify-content: center;
@@ -724,7 +731,6 @@ button {
 }
 .type__content {
   position: relative;
-  height: 640px;
   width: 100%;
 }
 .type__content--img {
@@ -798,6 +804,9 @@ button {
     display: none;
   }
 }
+.type__tabs {
+  display: block;
+}
 .type .tabs__nav-btn {
   height: 58px;
 }
@@ -809,23 +818,43 @@ button {
   }
 }
 
-.works {
-  padding: 100px 0;
+.works__slider {
+  margin-bottom: 140px;
+}
+@media (max-width: 425px) {
+  .works__slider {
+    margin-bottom: 40px;
+  }
 }
 .works__slider--item {
   position: relative;
 }
+.works__slider--item h4 {
+  font-size: 32px;
+  padding: 90px 0 20px;
+}
 .works__slider--text {
   width: 40%;
 }
-.works__slider--text h4 {
-  font-size: 32px;
-  padding: 90px 0 20px;
+@media (max-width: 960px) {
+  .works__slider--text {
+    width: 80%;
+  }
+}
+@media (max-width: 425px) {
+  .works__slider--text {
+    margin: 0 auto;
+  }
 }
 .works__slider--text p {
   font-size: 18px;
   line-height: 24px;
   margin-bottom: 60px;
+}
+@media (max-width: 960px) {
+  .works__slider--text p {
+    margin: 50px auto 20px;
+  }
 }
 .works__slider--img {
   position: absolute;
@@ -834,6 +863,26 @@ button {
   max-width: 850px;
   width: 100%;
   height: 100%;
+}
+@media (max-width: 1240px) {
+  .works__slider--img {
+    max-width: 650px;
+    top: -20px;
+  }
+}
+@media (max-width: 1080px) {
+  .works__slider--img {
+    max-width: 450px;
+    top: 50px;
+    right: 0;
+  }
+}
+@media (max-width: 960px) {
+  .works__slider--img {
+    position: relative;
+    max-width: 650px;
+    margin: 0 auto;
+  }
 }
 .works__slider--img img {
   width: 100%;
@@ -846,8 +895,23 @@ button {
   justify-content: start;
   gap: 30px;
 }
-.works__slider {
-  margin-bottom: 140px;
+@media (max-width: 425px) {
+  .works__slider--btns {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .works__slider--btns a {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .works__slider {
+    text-align: center;
+  }
 }
 .works__all {
   position: relative;
@@ -859,6 +923,11 @@ button {
   background-position: bottom;
   background-attachment: fixed;
 }
+@media (max-width: 425px) {
+  .works__all {
+    padding: 50px 0;
+  }
+}
 .works__all::after {
   content: "";
   position: absolute;
@@ -868,6 +937,13 @@ button {
   bottom: 0;
   background-color: var(--bg-color);
   opacity: 0.7;
+}
+@media (max-width: 425px) {
+  .works__all a {
+    width: 95%;
+    text-align: center;
+    padding: 20px;
+  }
 }
 .works__all .btn {
   position: relative;
