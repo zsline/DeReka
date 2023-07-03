@@ -1,8 +1,98 @@
-.footer{
-    height: 584px;
+.footer {
+    position: relative;
+    padding-top: 40px;
     background-image: url(../img/footer.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: bottom;
-        background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba($color: #000108, $alpha: 0.5);
+
+    }
+    h3{
+        position: relative;
+        z-index: 2;
+    }
+    &__content {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        z-index: 2;
+
+        @media (max-width:960px) {
+            flex-direction: column;
+        }
+
+        &--text {
+            max-width: 436px;
+            font-size: 20px;
+            font-family: Montserrat;
+            font-weight: 300;
+            margin-top: 40px;
+
+            p {
+                margin-bottom: 40px;
+            }
+        }
+
+        &--link {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 10px;
+            margin-bottom: 20px;
+
+            img {
+                height: 32px;
+                width: 32px;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: 100%;
+
+            @media (max-width:560px) {
+                display: block;
+            }
+
+            .btn {
+                @media (max-width:560px) {
+                    display: inline-block;
+                    width: 100%;
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        &--inputs {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+
+            @media (max-width:560px) {
+                flex-direction: column;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__copy {
+        text-align: center;
+        background-color: rgba($color: #000108, $alpha: 0.7);
+        padding: 94px 0 10px;
+    }
 }

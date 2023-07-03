@@ -11,10 +11,12 @@ h3 {
     font-size: 48px;
     font-weight: 300;
     text-transform: uppercase;
+
     @media (max-width:800px) {
         font-size: 36px;
         text-align: center;
     }
+
     @media (max-width:510px) {
         font-size: 24px;
 
@@ -25,11 +27,39 @@ button {
     color: var(--white-color);
 }
 
+input {
+    padding: 20px;
+    height: 54px;
+    max-width: 100%;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.12px;
+    outline: none;
+    color: var(--white-color);
+}
+
+textarea {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.12px;
+    padding: 20px;
+    width: 100%;
+    min-height: 144px;
+    outline: none;
+    color: var(--white-color);
+}
+
 .container {
     max-width: 1230px;
     padding: 0 15px;
 
     margin: 0 auto;
+
     @media (max-width:520px) {
         padding: 0 8px;
 
@@ -47,6 +77,7 @@ button {
     //     animation: scroll 20s infinite ease-in-out;
     // }
 }
+
 .btn {
     display: inline-block;
     padding: 23px 42px;
@@ -55,11 +86,12 @@ button {
     letter-spacing: 1.12px;
     text-transform: uppercase;
     transition: all 0.3s;
+
     @media (max-width:692px) {
         font-size: 14px;
-    padding: 15px 20px;
+        padding: 15px 20px;
     }
-    
+
 
     &:hover {
         background: rgba(255, 255, 255, 0.20);
@@ -76,11 +108,13 @@ button {
     transition: all 0.3s;
     height: auto;
     flex: auto;
+
     &:hover {
         background-color: var(--active);
     }
 }
-.btn-o{
+
+.btn-o {
     display: inline-block;
     padding: 18px 17px;
     border-radius: 10px;
@@ -89,10 +123,10 @@ button {
     transition: all 0.3s;
 }
 
-.tabs__nav-btn--active{
+.tabs__nav-btn--active {
     background-color: var(--active);
     box-shadow: 0 0 12px 5px var(--active);
-    
+
 }
 
 .tabs__panel {
@@ -108,12 +142,15 @@ button {
 // @include scroll;
 @include neon;
 
-.open{
+.open {
     display: block;
 }
 
 
 
-.todo{
+.todo {
     height: 540px;
+    @media (max-width:560px) {
+        height: 100px;
+    }
 }
