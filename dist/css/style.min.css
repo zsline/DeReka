@@ -1,8 +1,15 @@
 @font-face {
-  font-family: Jeff Script;
+  font-family: Jeff Script Regular;
   font-display: swap;
   src: url("../fonts/Jeff Script Regular.woff2") format("woff2"), url("../fonts/Jeff Script Regular.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 @font-face {
@@ -22,8 +29,15 @@
 @font-face {
   font-family: Montserrat;
   font-display: swap;
-  src: url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Sansation;
+  font-display: swap;
+  src: url("../fonts/sansationbold.woff2") format("woff2"), url("../fonts/sansationbold.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -31,13 +45,6 @@
   font-display: swap;
   src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
   font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: Montserrat;
-  font-display: swap;
-  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
-  font-weight: 400;
   font-style: normal;
 }
 :root {
@@ -100,6 +107,37 @@ body {
   font-size: 16px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Sansation;
+}
+
+h1 {
+  font-size: 96px;
+}
+
+h2 {
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+@media (max-width: 480px) {
+  h2 {
+    font-size: 48px;
+  }
+}
+@media (max-width: 360px) {
+  h2 {
+    font-size: 40px;
+  }
+}
+
 h3 {
   font-size: 48px;
   font-weight: 300;
@@ -115,6 +153,14 @@ h3 {
   h3 {
     font-size: 24px;
   }
+}
+
+h4 {
+  color: var(--accent);
+  font-size: 24px;
+  font-family: Sansation;
+  font-style: normal;
+  font-weight: 400;
 }
 
 button {
@@ -215,6 +261,10 @@ textarea {
   font-size: 16px;
   font-family: Montserrat;
   transition: all 0.3s;
+}
+.btn-o:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 0 20px 3px rgba(255, 255, 255, 0.3);
 }
 
 .tabs__nav-btn--active {
@@ -353,6 +403,7 @@ textarea {
   right: 40px;
   padding: 14px 25px;
   cursor: pointer;
+  z-index: 2;
 }
 .header__close {
   color: var(--white-color);
@@ -412,9 +463,6 @@ textarea {
 }
 .offer__title {
   text-align: right;
-  font-size: 96px;
-  font-family: Montserrat;
-  font-weight: 700;
   margin-bottom: 24px;
 }
 @media (max-width: 704px) {
@@ -1030,6 +1078,142 @@ textarea {
   bottom: 0;
   background-color: var(--bg-color);
   opacity: 0.7;
+}
+
+.portfolio h2 {
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+@media (max-width: 480px) {
+  .portfolio h2 {
+    bottom: 60px;
+  }
+}
+.portfolio__offer {
+  position: relative;
+  height: 362px;
+}
+@media (max-width: 480px) {
+  .portfolio__offer {
+    height: 262px;
+  }
+}
+.portfolio__offer > img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  object-fit: cover;
+  z-index: -1;
+}
+.portfolio__offer::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 1, 8, 0.5);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.portfolio__inner {
+  position: relative;
+  margin: 80px 0 100px;
+  padding-top: 80px;
+  background-image: url(../img/inner-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.portfolio__inner::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 1, 8, 0.7);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+}
+.portfolio__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+}
+@media (max-width: 1000px) {
+  .portfolio__item {
+    flex-direction: column;
+  }
+}
+@media (max-width: 440px) {
+  .portfolio__item {
+    margin-bottom: 40px;
+  }
+}
+.portfolio__item--info {
+  padding: 25px;
+  max-width: 490px;
+  z-index: 100;
+  background-color: rgba(0, 1, 8, 0.5);
+}
+@media (max-width: 1000px) {
+  .portfolio__item--info {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.portfolio__item--info h4 {
+  margin-bottom: 20px;
+}
+@media (max-width: 440px) {
+  .portfolio__item--info > .btn-o {
+    width: 100%;
+    text-align: center;
+  }
+}
+.portfolio__item--crumbs {
+  margin-bottom: 30px;
+}
+.portfolio__item--crumbs .crumbs__date {
+  margin-bottom: 20px;
+}
+.portfolio__item p {
+  margin-bottom: 50px;
+}
+.portfolio__item--img {
+  margin-right: -100px;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 20px;
+  transform: translateX(-50px);
+  z-index: 2;
+  overflow: hidden;
+}
+.portfolio__item--img > img {
+  display: block;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transform: scale(1);
+  transition: all 0.7s ease-in-out;
+}
+.portfolio__item--img > img:hover {
+  transform: scale(1.1);
+}
+.portfolio__item:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+@media (max-width: 1000px) {
+  .portfolio__item:nth-child(2n) {
+    flex-direction: column;
+  }
 }
 
 .footer {

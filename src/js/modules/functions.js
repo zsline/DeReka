@@ -66,7 +66,7 @@ if(texts) {
 }
 
 
-
+// Меню
 const navMenu = document.querySelector('.header__nav');
 const openMenu = document.querySelector('.header__open');
 const closeMenu = document.querySelector('.header__close');
@@ -79,6 +79,8 @@ if(navMenu) {
     });
 };
 
+
+// Табы
 import { DerTabs } from "./tabsplugin.js";
 const tab = new DerTabs('tab', {
     isChanget: (tabs) => {

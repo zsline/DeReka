@@ -58,6 +58,7 @@
         right: 40px;
         padding: 14px 25px;
         cursor: pointer;
+        z-index: 2;
     }
     &__close {
         color: var(--white-color);

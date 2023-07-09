@@ -7,7 +7,36 @@ body {
     font-size: 16px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Sansation;
+
+}
+
+h1 {
+    font-size: 96px;
+}
+
+h2 {
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    @media (max-width:480px) {
+        font-size: 48px;
+    }
+    @media (max-width:360px) {
+        font-size: 40px;
+    }
+}
+
 h3 {
+
     font-size: 48px;
     font-weight: 300;
     text-transform: uppercase;
@@ -21,6 +50,14 @@ h3 {
         font-size: 24px;
 
     }
+}
+
+h4 {
+    color: var(--accent);
+    font-size: 24px;
+    font-family: Sansation;
+    font-style: normal;
+    font-weight: 400;
 }
 
 button {
@@ -121,6 +158,10 @@ textarea {
     font-size: 16px;
     font-family: Montserrat;
     transition: all 0.3s;
+    &:hover{
+        background-color: rgba($color: #fff, $alpha: 0.18);
+        box-shadow: 0 0 20px 3px rgba($color: #fff, $alpha:0.3);
+    }
 }
 
 .tabs__nav-btn--active {
@@ -150,6 +191,7 @@ textarea {
 
 .todo {
     height: 540px;
+
     @media (max-width:560px) {
         height: 100px;
     }

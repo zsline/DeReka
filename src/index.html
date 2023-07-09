@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 @@include('html/head.html',{
 "title":"Главная"
@@ -16,7 +16,7 @@
                             <p>Преподнести себя,<br>свою фирму и свой продукт <br>— уже половина успеха</p>
                         </div>
                         <div class="offer__quote--btns">
-                            <a href="#" class="quote__btn btn glass">Смотреть работы</a>
+                            <a href="portfolio.html" class="quote__btn btn glass">Смотреть работы</a>
                             <a href="#" class="quote__btn btn glass">Заказать сайт</a>
                         </div>
 
@@ -301,7 +301,7 @@
                                         конвертации его в клиента.</p>
                                     <div class="glass btn-o type__content--btn read">Читать</div>
                                     <a href="#" class="glass btn-o type__content--btn">Заказать сайт</a>
-                                    <a href="#" class="glass btn-o type__content--btn">Смотреть все</a>
+                                    <a href="portfolio.html" class="glass btn-o type__content--btn">Смотреть все</a>
                                 </div>
                             </div>
                             <div class="tabs__panel">
@@ -321,7 +321,7 @@
                                         ремонту одежды, творческим студиям, психологам и фотографам.</p>
                                         <div class="glass btn-o type__content--btn read">Читать</div>
                                     <a href="#" class="glass btn-o type__content--btn">Заказать сайт</a>
-                                    <a href="#" class="glass btn-o type__content--btn">Смотреть все</a>
+                                    <a href="portfolio.html" class="glass btn-o type__content--btn">Смотреть все</a>
                                 </div>
                             </div>
                             <div class="tabs__panel">
@@ -340,7 +340,7 @@
                                         деятельности, услуг или товаров.</p>
                                         <div class="glass btn-o type__content--btn read">Читать</div>
                                         <a href="#" class="glass btn-o type__content--btn">Заказать сайт</a>
-                                        <a href="#" class="glass btn-o type__content--btn">Смотреть все</a>
+                                        <a href="portfolio.html" class="glass btn-o type__content--btn">Смотреть все</a>
                                 </div>
                             </div>
                             <div class="tabs__panel">
@@ -361,7 +361,7 @@
                                         остальное — как в обычном магазине.</p>
                                     <div class="glass btn-o type__content--btn read">Читать</div>
                                     <a href="#" class="glass btn-o type__content--btn">Заказать сайт</a>
-                                    <a href="#" class="glass btn-o type__content--btn">Смотреть все</a>
+                                    <a href="portfolio.html" class="glass btn-o type__content--btn">Смотреть все</a>
                                 </div>
                             </div>
                         </div>
@@ -390,26 +390,11 @@
         </div>
     </div>
     <div class="works__all">
-        <a href="#" class="btn glass">Смотреть все работы</a>
+        <a href="portfolio.html" class="btn glass">Смотреть все работы</a>
     </div>
 </section>
-<section class="tools">
-    <div class="container">
-        <h3>инструменты и технологии</h3>
-    </div>
-    <div class="tools__inner">
-        <img src="@img/figma.png" alt="figma">
-        <img src="@img/photoshop.png" alt="photoshop">
-        <img src="@img/HTML5.png" alt="HTML5">
-        <img src="@img/css-8.png" alt="css">
-        <img src="@img/javascript.png" alt="javascript">
-        <img src="@img/jquery.png" alt="jquery">
-        <img src="@img/wordpress.png" alt="wordpress">
-        <img src="@img/gulp.png" alt="gulp">
-        <img src="@img/php.png" alt="php">
-    </div>
-    <div class="tools__line"></div>
-</section>
+@@include('html/parts/tools.html',{})
+
 <section class="todo">
 
 </section>
