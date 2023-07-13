@@ -1102,7 +1102,7 @@ textarea {
     height: 262px;
   }
 }
-.portfolio__offer > img {
+.portfolio__offer img {
   position: absolute;
   width: 100%;
   height: auto;
